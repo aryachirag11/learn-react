@@ -1,5 +1,7 @@
+import MyComp from "./MyComp";
+
 function App() {
-  return <h1>Hey from Chirag</h1>;
+  return <MyComp />;
 }
 
 export default App;

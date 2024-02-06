@@ -1,5 +1,7 @@
+import Chai from "./Chai";
+
 function App() {
-  return <h1>Hello from chai and code</h1>;
+  return <Chai />;
 }
 
 export default App;
