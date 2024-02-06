@@ -1,7 +1,13 @@
 import MyComp from "./MyComp";
 
 function App() {
-  return <MyComp />;
+  const username = "Chirag";
+  return (
+    <>
+      <h1>Hello {username}</h1>
+      <MyComp />
+    </>
+  );
 }
 
 export default App;
