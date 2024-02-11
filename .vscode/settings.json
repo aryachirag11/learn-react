@@ -1,0 +1,7 @@
+{
+  "emmet.preferences": {},
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "autoimport.filesToScan": "./src/** ./src/app/**/*.{js,jsx,ts,tsx}"
+}
