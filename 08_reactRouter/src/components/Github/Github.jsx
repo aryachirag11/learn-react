@@ -17,7 +17,7 @@ const Github = () => {
   return (
     <div className="text-center m-4 bg-gray-500 text-white p-4 text-3xl">
       Github : {data.bio}
-      <img src="{data.avatar_url}" alt="" width={300} />
+      <img src={data.avatar_url} alt="" width={300} />
     </div>
   );
 };
