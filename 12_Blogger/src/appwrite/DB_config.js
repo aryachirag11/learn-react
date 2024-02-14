@@ -112,7 +112,7 @@ export class Service {
     return this.bucket.getFilePreview(conf.appwriteBucketId, fileId);
   }
   downloadFile(fileId) {
-    return this.bucket.getFileDownload(conf.appwriteBucket, fileId);
+    return this.bucket.getFileDownload(conf.appwriteBucketId, fileId);
   }
 }
 
