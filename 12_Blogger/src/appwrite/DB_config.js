@@ -85,7 +85,8 @@ export class Service {
       return false;
     }
   }
-  // file upload service
+  // upload file service : bucket service(in future include this another file)
+
   async uploadFile(file) {
     try {
       return await this.bucket.createFile(
@@ -109,6 +110,9 @@ export class Service {
   }
   previewFile(fileId) {
     return this.bucket.getFilePreview(conf.appwriteBucketId, fileId);
+  }
+  downloadFile(fileId) {
+    return this.bucket.getFileDownload(conf.appwriteBucket, fileId);
   }
 }
 
