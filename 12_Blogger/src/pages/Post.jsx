@@ -6,6 +6,7 @@ import parse from "html-react-parser";
 import { useSelector } from "react-redux";
 
 export default function Post() {
+  const [loaded, setLoaded] = useState(false);
   const [post, setPost] = useState(null);
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -36,10 +37,23 @@ export default function Post() {
     <div className="py-8">
       <Container>
         <div className="w-full flex justify-center mb-4 relative border rounded-xl p-2">
+          {!loaded && (
+            <img
+              src={`${appwriteService.previewFile(
+                post.featuredImage
+              )}?blur=true`}
+              alt={post.title}
+              style={{
+                filter: "blur(10px)",
+              }}
+              className="rounded-xl"
+            />
+          )}
           <img
-            src={appwriteService.getFilePreview(post.featuredImage)}
+            src={appwriteService.previewFile(post.featuredImage)}
             alt={post.title}
-            className="rounded-xl"
+            style={{ opacity: loaded ? 1 : 0, transition: "opacity 1.5s" }}
+            onLoad={() => setLoaded(true)}
           />
 
           {isAuthor && (
